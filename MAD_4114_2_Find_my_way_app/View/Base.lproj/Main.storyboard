@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MAD_4114_2_Find_my_way_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If5-Ts-5dq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trl-Aw-6lX">
+                                <rect key="frame" x="317" y="752" width="56" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="route"/>
+                                <connections>
+                                    <action selector="drawRoute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQF-Rb-2Bo"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-rK-Jo3">
+                                <rect key="frame" x="16" y="760" width="135.33333333333334" height="31"/>
+                                <subviews>
+                                    <switch toolTip="Trasnport Type: [Automobile or Walking]" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="trasnportType" translatesAutoresizingMaskIntoConstraints="NO" id="SjZ-PC-u7K">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXB-HC-r5V">
+                                        <rect key="frame" x="48.999999999999993" y="0.0" width="86.333333333333314" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-C0-4dE">
+                                <rect key="frame" x="128.66666666666666" y="75" width="135.99999999999997" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Zoom In" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xei-It-5qV">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="58"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="zoom-out"/>
+                                        <connections>
+                                            <action selector="zoomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBH-6D-qW1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Zoom Out" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuN-Gj-q6X">
+                                        <rect key="frame" x="68" y="0.0" width="68" height="58"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="zoom-in"/>
+                                        <connections>
+                                            <action selector="zoomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agc-nv-MvD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="If5-Ts-5dq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Lh-A4-rAe"/>
+                            <constraint firstItem="LDa-rK-Jo3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5au-jw-6f0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Trl-Aw-6lX" secondAttribute="bottom" constant="20" id="B77-gM-PLf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="If5-Ts-5dq" secondAttribute="bottom" id="EdX-Vm-ah5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Trl-Aw-6lX" secondAttribute="trailing" constant="20" id="Pjt-zp-4tp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LDa-rK-Jo3" secondAttribute="bottom" constant="27" id="Ypv-fm-OkQ"/>
+                            <constraint firstItem="If5-Ts-5dq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z4K-NW-fz5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="If5-Ts-5dq" secondAttribute="trailing" id="ZAr-hc-CCT"/>
+                            <constraint firstItem="Trl-Aw-6lX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LDa-rK-Jo3" secondAttribute="trailing" constant="8" symbolic="YES" id="b2f-RF-vSU"/>
+                            <constraint firstItem="NLx-C0-4dE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="kud-dq-pec"/>
+                            <constraint firstItem="NLx-C0-4dE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xmS-FB-37Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="directionButton" destination="Trl-Aw-6lX" id="DyZ-B5-v4v"/>
+                        <outlet property="map" destination="If5-Ts-5dq" id="I5u-X1-Fl0"/>
+                        <outlet property="transportTypeSwitch" destination="SjZ-PC-u7K" id="12l-cz-GuI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="route" width="32" height="32"/>
+        <image name="zoom-in" width="44" height="44"/>
+        <image name="zoom-out" width="44" height="44"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

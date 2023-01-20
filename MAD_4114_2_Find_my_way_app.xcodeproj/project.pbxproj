@@ -58,13 +58,29 @@
 			children = (
 				AD7B434B29770FBD008D1164 /* AppDelegate.swift */,
 				AD7B434D29770FBD008D1164 /* SceneDelegate.swift */,
-				AD7B434F29770FBD008D1164 /* ViewController.swift */,
-				AD7B435129770FBD008D1164 /* Main.storyboard */,
+				ADF40038297A5A2500113B6E /* View */,
+				ADF40039297A5A4200113B6E /* Controller */,
 				AD7B435429770FBE008D1164 /* Assets.xcassets */,
 				AD7B435629770FBE008D1164 /* LaunchScreen.storyboard */,
 				AD7B435929770FBE008D1164 /* Info.plist */,
 			);
 			path = MAD_4114_2_Find_my_way_app;
+			sourceTree = "<group>";
+		};
+		ADF40038297A5A2500113B6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD7B435129770FBD008D1164 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADF40039297A5A4200113B6E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD7B434F29770FBD008D1164 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
